@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  streamslurp:
+    image: ckevi/streamslurp:latest
+    container_name: streamslurp
+    volumes:
+      - ./vods:/opt/streamslurp/vods
+    environment:
+      - STR_KEY=
+      - STR_CHANNEL=
+      - STR_RES=
+    restart: unless-stopped
